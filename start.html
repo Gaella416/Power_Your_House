@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Cashpower Access</title>
+  <link rel="stylesheet" href="start.css" />
+</head>
+<body>
+
+  <div class="app-container">
+
+    <header>
+      <h1>Smart Cashpower</h1>
+      <p>Remote Token Input & Power Monitoring</p>
+    </header>
+
+    <section class="card">
+      <a class="settings-link" href="settings.html"><img src="settings-line.png" alt="Settings"></a>
+      <label for="meter">Registered Meter Number</label>
+      <select id="meter">
+        <option value="">Select meter</option>
+        <option>CP-123456</option>
+        <option>CP-789012</option>
+        <option>CP-345678</option>
+      </select>
+
+      <label for="token">Electricity Token</label>
+      <input
+        type="text"
+        id="token"
+        maxlength="20"
+        placeholder="Enter 20-digit token"
+      />
+
+      <button onclick="saveToken()">Save Token</button>
+    </section>
+
+    <section class="card status-card">
+      <h3>Power Status</h3>
+      <div id="status" class="status waiting">
+        Waiting for meter signal…
+      </div>
+    </section>
+
+  </div>
+
+  <script src="start.js"></script>
+</body>
+</html>
